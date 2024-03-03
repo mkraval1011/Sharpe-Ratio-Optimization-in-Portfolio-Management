@@ -20,3 +20,7 @@ The project provides a systematic approach to portfolio management that helps in
 In addition, the project might make use of state-of-the-art platforms and tools for algorithmic trading, data analysis, and portfolio optimization, showcasing the integration of technology.
 
 ## Screenshot and Demos
+<img src = "https://github.com/mkraval1011/Sharpe-Ratio-Optimization-in-Portfolio-Management/blob/main/WhatsApp%20Image%202024-03-03%20at%2012.21.37_46b907d2.jpg" alt="basic idea">
+<img src = "https://github.com/mkraval1011/Sharpe-Ratio-Optimization-in-Portfolio-Management/blob/main/WhatsApp%20Image%202024-03-03%20at%2012.21.37_46b907d2.jpg" alt="basic idea">
+<img src = "https://github.com/mkraval1011/Sharpe-Ratio-Optimization-in-Portfolio-Management/blob/main/WhatsApp%20Image%202024-03-03%20at%2012.21.37_46b907d2.jpg" alt="basic idea">
+<img src = "https://github.com/mkraval1011/Sharpe-Ratio-Optimization-in-Portfolio-Management/blob/main/WhatsApp%20Image%202024-03-03%20at%2012.21.37_46b907d2.jpg" alt="basic idea">
