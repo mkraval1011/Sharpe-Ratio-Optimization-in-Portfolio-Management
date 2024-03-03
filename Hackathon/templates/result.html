@@ -1,0 +1,117 @@
+<!-- result.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimized Portfolio Result</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        h2 {
+            color: #28a745;
+            border-bottom: 2px solid #28a745;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        .box {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            border: 2px solid #007bff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        #analysisButton {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #analysisButton:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div style="max-width: 600px; margin: auto; text-align: center;">
+
+        <h1>Optimized Portfolio Result</h1>
+
+        <div class="box">
+            <h2>Sector</h2>
+            <p>{{ sector }}</p>
+        </div>
+
+        <div class="box">
+            <h2>Optimized Weights</h2>
+            <ul>
+                {% for i in range(assets|length) %}
+                    <li><strong>{{ assets[i] }}:</strong> {{ weights[i] }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>Portfolio Metrics</h2>
+            <p><strong>Portfolio Return:</strong> {{ optimized_portfolio_return }}</p>
+            <p><strong>Portfolio Standard Deviation:</strong> {{ optimized_portfolio_std_dev }}</p>
+            <p><strong>Sharpe Ratio:</strong> {{ optimized_sharpe_ratio }}</p>
+        </div>
+
+        <a href="{{ url_for('index') }}">Back to Home</a>
+        <button id="analysisButton">Analysis</button>
+        <div id="covarianceMatrixContainer" style="margin-top: 20px;"></div>
+
+        <!-- Add any other information you want to display here -->
+
+    </div>
+</body>
+</html>

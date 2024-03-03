@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sector Weight Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/style.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 50px;
+        }
+        label {
+            font-weight: bold;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Sector Weight Calculator</h1>
+        <form action="/calculate_weight" method="post">
+            <div class="form-group">
+                <label for="sector">Select Sector:</label>
+                <select class="form-control" name="sector" id="sector" required>
+                    <option value="METAL">METAL</option>
+                    <option value="FINTECH">FINTECH</option>
+                    <option value="AUTOMOBILE">AUTOMOBILE</option>
+                    <option value="FMCG">FMCG</option>
+                    <option value="BANKING">BANKING</option>
+                </select>
+            </div>
+            <button type="submit">Calculate Weight</button>
+        </form>
+
+        <!-- Result Section -->
+        <div class="result">
+            {% if assets and weights %}
+                <h2>Optimized Weights:</h2>
+                <ul>
+                    {% for asset, weight in zip(assets, weights) %}
+                        <li>{{ asset }}: {{ weight }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
